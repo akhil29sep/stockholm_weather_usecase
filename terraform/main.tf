@@ -82,7 +82,7 @@ resource "aws_glue_job" "akhil_test_job" {
 
 resource "aws_glue_catalog_database" "aws_glue_catalog_database" {
   name = "akhil_test_db"
-  location_uri = ""
+  location_uri = "s3://${aws_s3_bucket.create_bucket.id}/publish/"
 }
 
 
